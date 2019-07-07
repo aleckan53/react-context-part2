@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #2D2D2D;
+  --text1: #fff;
+  --text2: #ffffff70;
+  --btn1: red;
+  --btn2: rgb(20, 112, 148);
+  --border: #00000030;
+  --card: #ffffff20;
+}
+
+body {
+  margin: 0;
+  font-family: Nunito, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg);
+}
+
+.App {
+  padding: 2rem;
+}
+
+.App h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text1);
+}
+
+.Cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+}
+
+.Card {
+  min-width: 300px;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 1rem;
+  box-shadow: 0 10px 10px -5px #00000050;
+  position: relative;
+  height: 600px;
+  background: var(--card);
+  color: var(--text1);
+}
+
+.Card .description {
+  height: 200px;
+  overflow: hidden;
+  margin: .5rem 0 0;
+}
+
+.Card .img-container {
+  width: 100%;
+  height: 200px;
+  display: grid;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.Card .img-container img {
+  height: 100%;
+}
+
+.Card h3 {
+  margin: 1rem 0 .5rem;
+}
+
+.Card a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid #ffffff20;
+  border-radius: 7px;
+  width: calc(100% - 2rem);
+  display: block;
+  height: 30px;
+  background: var(--btn2);
+  position: absolute;
+  bottom: 1rem;
+  text-align: center;
+  line-height: 1.7;
+  font-weight: 800;
+}
+
+.LangSwitch {
+  display: flex;
+  place-content: center;
+  margin-bottom: 2rem;
+}
+
+.LangSwitch button {
+  margin: 0 1rem;
+  width: 50px;
+  height: 50px;
+  appearance: none;
+  border-radius: 10px;
+  border: 1px solid #ffffff30;
+  transition: .5s ease;
+  transform: scale(1) translateZ(0) perspective(1px);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  outline: none;
+  background: none;
+  color: var(--text1)
+}
+
+.LangSwitch button:hover {
+  transform: scale(1.2) translateZ(0) perspective(1px);
+  transition: .5s ease;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.LangSwitch button.active {
+  border: 3px solid rgba(58, 146, 247, .7);
+  background: #ffffff30;
+  color: var(--text1);
+}

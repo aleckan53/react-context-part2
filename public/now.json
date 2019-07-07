@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "alias": "ui_lang_switch",
+  "name": "ui_lang_switch",
+  "routes": [
+      {
+        "src": "^/static/(.*)",
+        "dest": "/static/$1"
+      },
+      {
+        "src": ".*",
+        "dest": "/index.html"
+      }
+  ]
+}
